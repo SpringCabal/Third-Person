@@ -182,7 +182,7 @@ local function updateMovementSpeed(unitID, ud, speedFactor, turnAccelFactor, max
 	local isSlowed = speedFactor < 1
 	if isSlowed then
 		-- increase brake rate to cause units to slow down to their new max speed correctly.
-		decFactor = 1000
+		-- decFactor = 1000
 	end
 	if speedFactor <= 0 then
 		speedFactor = 0

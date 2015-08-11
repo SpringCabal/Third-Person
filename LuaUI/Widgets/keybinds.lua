@@ -35,10 +35,10 @@ function SetBindings()
 		"Any+right moveright",
 		"Any+down moveback",
 		
-		"Any+w moveforward ",
-		"Any+a moveleft ",
-		"Any+d moveright",
-		"Any+s moveback",
+		--"Any+w moveforward ",
+		--"Any+a moveleft ",
+		--"Any+d moveright",
+		--"Any+s moveback",
 		
 		"Any+pageup moveup",
 		"Any+pagedown movedown",
@@ -54,7 +54,12 @@ function widget:Initialize()
     if not devMode then 
         Spring.SendCommands("unbindall") --muahahahaha
         Spring.SendCommands("unbindkeyset enter chat") --because because.
-    end
+    else
+		Spring.SendCommands("unbindkeyset w")
+		Spring.SendCommands("unbindkeyset s")
+		Spring.SendCommands("unbindkeyset a")
+		Spring.SendCommands("unbindkeyset d")
+	end
     SetBindings()
     
     
@@ -66,9 +71,7 @@ function widget:Initialize()
     }
     
     mouseText = {
-        purple .. "Left click: " .. white .. "Shoot",
-        purple .. "Right click : " .. white .. "Place Mines",
-        purple .. "Scroll Wheel : " .. white .. "Zoom",
+        purple .. "WSAD: " .. white .. "Movement",
         purple .. "Ctrl+Q : " .. white .. "Quit",
     }
 

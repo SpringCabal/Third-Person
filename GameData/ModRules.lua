@@ -8,9 +8,10 @@ local modRules = {
 		allowUnitCollisionOverlap = false,
 		allowGroundUnitGravity    = true,
 		allowDirectionalPathing   = true,
+		allowHoverUnitStrafing    = false,
 	},
 	system = {
-		pathFinderSystem = 0, -- legacy
+		pathFinderSystem = 1, -- 0 = legacy, 1 = QTPFS
 	},
 }
 

@@ -11,6 +11,16 @@ local moveDefs  =    {
         crushStrength   =   5,
         heatmapping     =   false,
     },
+    {
+        name            =   "Hover2x2",
+        footprintX      =   2,
+        footprintZ      =   2,
+        maxWaterDepth   =   20,
+        maxSlope        =   55,
+        crushStrength   =   5,
+        heatmapping     =   false,
+		speedModClass   =   2,
+    },
 }
 
 return moveDefs
